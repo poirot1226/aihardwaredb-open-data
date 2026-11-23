@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aihardwaredb.com/data/v1/schema.json",
+  "title": "AIHardwareDB Consumer AI Hardware 2-Year Ownership Cost Dataset",
+  "description": "Document-verified structured dataset of consumer AI hardware retail prices, 24-month Free/Annual Pro/Unlimited total costs, lifecycle availability status, privacy LEDs, local storage, export formats, and BYOK openness.",
+  "version": "1.1.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "verified_date",
+    "currency",
+    "total_indexed_devices",
+    "devices"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "schema_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string",
+      "format": "uri"
+    },
+    "verified_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "update_cadence": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD"
+      ]
+    },
+    "total_indexed_devices": {
+      "type": "integer"
+    },
+    "deep_audited_devices": {
+      "type": "integer"
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "name",
+          "brand",
+          "category",
+          "status",
+          "coverage_level",
+          "hardware_usd",
+          "verified_date"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Unique stable kebab-case identifier."
+          },
+          "name": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "release_year": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "discontinued",
+              "service_shutdown"
+            ],
+            "description": "Current commercial & cloud lifecycle status. Discontinued/service_shutdown models are not currently buyable."
+          },
+          "availability_note": {
+            "type": "string"
+          },
+          "coverage_level": {
+            "type": "string",
+            "enum": [
+              "deep_audit",
+              "indexed_spec"
+            ],
+            "description": "deep_audit = dedicated full specification & 24-month cost review page live; indexed_spec = verified pricing & spec row in master dataset."
+          },
+          "hardware_usd": {
+            "type": "number",
+            "description": "Verified retail hardware MSRP or standard promo price in USD."
+          },
+          "two_year_total_min_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "24-month Free/Minimum tier total in USD. Null when device status is discontinued or service_shutdown."
+          },
+          "two_year_total_annual_pro_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "24-month Annual Pro tier total in USD. Null when device status is discontinued or service_shutdown."
+          },
+          "two_year_total_unlimited_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "24-month Unlimited/Heavy tier total in USD. Null when device status is discontinued or service_shutdown."
+          },
+          "documented_cost_historical_usd": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Historical 24-month nominal total preserved for discontinued or service_shutdown devices only; null for active models."
+          },
+          "weight_grams": {
+            "type": "number"
+          },
+          "battery_life": {
+            "type": "string"
+          },
+          "has_recording_led": {
+            "type": "boolean"
+          },
+          "has_camera": {
+            "type": "boolean"
+          },
+          "local_storage": {
+            "type": "string"
+          },
+          "export_formats": {
+            "type": "string"
+          },
+          "byok_api_support": {
+            "type": "boolean"
+          },
+          "open_source_firmware": {
+            "type": "boolean"
+          },
+          "openness_score_out_of_5": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "verified_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "official_source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "detail_page_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}
