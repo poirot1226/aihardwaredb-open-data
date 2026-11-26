@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastAuditDate": "2026-11-23",
+  "windowDays": 30,
+  "entries": [
+    {
+      "date": "2026-11-23",
+      "scope": "Wave 1 (8 live AI voice recorders & pendants)",
+      "affectedSlugs": [
+        "plaud-note",
+        "plaud-note-pro",
+        "plaud-notepin",
+        "pocket-ai-recorder",
+        "omi-pendant",
+        "anker-soundcore-work",
+        "switchbot-ai-mindclip",
+        "mobvoi-ticnote"
+      ],
+      "changed": false,
+      "status": "Verified · No MSRP/Tier Change",
+      "delta": "Re-audited official vendor stores (plaud.ai, heypocket.com, omi.me, soundcore.com, switch-bot.com, ticnote.com). All 8 standard hardware MSRPs and Pro/Unlimited subscription rates matched baseline (seasonal Black Friday promos noted separately; VERIFIED_DATE baseline retained at 2026-11-22).",
+      "sources": "Official vendor stores"
+    },
+    {
+      "date": "2026-11-22",
+      "scope": "Full 34-device dataset (Schema v1.1.0)",
+      "affectedSlugs": [],
+      "changed": false,
+      "status": "Baseline Published",
+      "delta": "Published initial CC BY 4.0 24-month cost dataset across 32 active models, 1 service_shutdown device (Humane AI Pin), and 1 discontinued device (Limitless Pendant), plus versioned /data/v1/ CSV, JSON & Schema endpoints.",
+      "sources": "Vendor stores & shutdown notices"
+    }
+  ]
+}

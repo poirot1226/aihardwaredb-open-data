@@ -163,6 +163,16 @@
             "type": "string",
             "format": "date"
           },
+          "price_verified_at": {
+            "type": "string",
+            "format": "date",
+            "description": "Most recent date the official vendor store MSRP and plan pricing were manually re-verified."
+          },
+          "plans_updated_at": {
+            "type": "string",
+            "format": "date",
+            "description": "Most recent date a subscription plan tier or pricing baseline changed."
+          },
           "official_source_url": {
             "type": "string",
             "format": "uri"

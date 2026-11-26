@@ -9,7 +9,7 @@
 
 ## Overview
 
-This repository mirrors the open, document-verified **AIHardwareDB v1.1.0 dataset** covering **34 consumer AI hardware devices** across AI voice recorders, smart rings, AI glasses, translation earbuds, companion robots, and discontinued/bricked hardware (**8 deep-audited models** with live review pages + **26 spec-indexed models**).
+This repository mirrors the open, document-verified **AIHardwareDB v1.1.0 dataset** covering **34 personal consumer AI wearables** across AI voice recorders, wearable pendants, smart rings, AI glasses, translation earbuds, companion robots, and discontinued/bricked wearables (explicitly excluding desktop GPU boxes or cloud compute servers) (**8 deep-audited models** with live review pages + **26 spec-indexed models**).
 
 Every active device is measured against one reproducible ownership formula:
 
@@ -47,7 +47,12 @@ Discontinued and cloud-shutdown devices (such as **Humane AI Pin** and **Limitle
 - `two_year_total_min_usd` / `two_year_total_annual_pro_usd` / `two_year_total_unlimited_usd` (`null` for inactive devices)
 - `documented_cost_historical_usd` (populated for discontinued / bricked hardware only)
 - `has_recording_led`, `has_camera`, `local_storage`, `export_formats`, `byok_api_support`, `open_source_firmware`, `openness_score_out_of_5`
-- `verified_date` & `official_source_url`
+- `price_verified_at`, `plans_updated_at` & `official_source_url`
+
+## Permanent DOIs
+
+- **Zenodo (CERN):** [10.5281/zenodo.24460062](https://doi.org/10.5281/zenodo.24460062)
+- **Figshare:** [10.6084/m9.figshare.35100805](https://doi.org/10.6084/m9.figshare.35100805)
 
 ## How to Cite (CC BY 4.0)
 
